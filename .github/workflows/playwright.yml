@@ -16,11 +16,11 @@ jobs:
       with:
         node-version: 18
 
-    - name: Install Dependencies
-      run: |
-          npm install
-          npx playwright install chromium
+    - name: Install Node Modules
+      run: npm install
 
+    - name: Install Playwright Browsers
+      run: npx --yes playwright install chromium
 
     - name: Run Scraper 24f3003295@ds.study.iitm.ac.in
       run: node scrape.js
