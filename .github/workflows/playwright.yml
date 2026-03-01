@@ -18,8 +18,9 @@ jobs:
 
     - name: Install Dependencies
       run: |
-        npm install
-        npx playwright install --with-deps
+          npm install
+          npx playwright install chromium
+
 
     - name: Run Scraper 24f3003295@ds.study.iitm.ac.in
       run: node scrape.js
